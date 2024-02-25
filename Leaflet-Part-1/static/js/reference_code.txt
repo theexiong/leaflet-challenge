@@ -15,10 +15,8 @@ d3.json(url).then((data) => {
         let geometry = firstQuake.geometry;
         let lat = geometry.coordinates[0];
         let lon = geometry.coordinates[1];
-
         console.log(quakeId, magValue, lat, lon);
         //console.log(earthquake);
-
         Object.entries(earthquake).forEach((quake) => {
             //let mag = earthquake.properties;
             //console.log(mag);
@@ -83,7 +81,6 @@ marker.bindPopup("Hello There!");
 function markerSize(mag) {
 return Math.sqrt(magValue) * 50;
 };
-
 // Loop through the json, and create one marker for each earthquake.
 for (let i = 0; i < earthquakes.length; i++) {
 L.circle(earthquakes[i].lat_lon, {
@@ -139,9 +136,3 @@ function createMarkers(response) {
 //function markerSize(mag) {
 //return Math.sqrt(mapInfo[0]) * 50;
 //};
-
-
-  
-
-  
-
